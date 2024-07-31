@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const axiosClient = axios.create({
-    baseURL: "http://10.193.129.11:3005/",
+    baseURL: "http://localhost:3005/" /* "http://10.193.129.11:3005/" */,
     withCredentials: true
 })
 
