@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .initial {
+        display: initial;
+    }
+
+    .gridColumnI {
+        grid-column: 1
+    }
+
+    .gridColumnII {
+        grid-column: 2
+    }
+
+    .animation-flotar {
+        animation: flotar 1.7s ease-in-out infinite alternate;
+    }
+
+    @keyframes flotar {
+        0% {
+            transform: translate(0, 0px);
+        }
+
+        50% {
+            transform: translate(0, 4px);
+        }
+
+        100% {
+            transform: translate(0, -0px);
+        }
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
+  }
+
+  @keyframes cascade-slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-cascade-slide-down {
+    animation: cascade-slide-down 0.2s ease-out forwards;
+  }
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 0.5s ease-out forwards;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
